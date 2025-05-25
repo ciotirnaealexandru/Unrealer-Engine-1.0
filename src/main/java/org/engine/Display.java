@@ -102,7 +102,7 @@ public class Display extends Canvas implements Runnable {
         // make sure to terminate the project if i hit X in the frame
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         // set the size of the frame
-        frame.setSize(WIDTH, HEIGHT);
+        frame.setPreferredSize(new Dimension(WIDTH, HEIGHT));
         // center the frame
         frame.setLocationRelativeTo(null);
         // make it so it cannot be resized
@@ -111,6 +111,8 @@ public class Display extends Canvas implements Runnable {
         frame.setVisible(true);
         // add a title to the frame
         frame.setTitle(TITLE);
+
+        frame.pack();
 
         System.out.println("Running...");
 
